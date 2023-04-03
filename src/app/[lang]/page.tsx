@@ -23,7 +23,11 @@ export default async function Home({ params: { lang } }: HomeProps) {
         actionLabel={dict.navigation["action-button"]}
       />
       <Services services={dict.services} />
-      <Portifolio />
+      <Portifolio
+        title={dict.portifolio.title}
+        description={dict.portifolio.description}
+        portifolios={dict.portifolio.portifolios}
+      />
     </main>
   );
 }

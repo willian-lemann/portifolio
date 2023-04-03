@@ -43,5 +43,14 @@
             ]
          }
       ]
+   },
+   "portifolio": {
+      "title": "Portfólio",
+      "description": "Desde o início da minha jornada como designer e desenvolvedor freelancer, tenho realizado trabalhos remotos para agências, consultado para startups e colaborado com pessoas talentosas para criar produtos digitais para uso empresarial e do consumidor. Ofereço uma ampla gama de serviços, incluindo design de marca, programação e ensino.",
+      "portifolios": [
+         {
+            "image": "/images"
+         }
+      ]
    }
 }
