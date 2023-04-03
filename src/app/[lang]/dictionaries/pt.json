@@ -4,26 +4,43 @@
    },
    "hero": {
       "title": "Engenheiro Frontend | E-commerce | Sistemas web para automatizar uma necessidade",
-      "description": "Transformando ideias em soluções digitais: conheça meu portfólio de desenvolvimento de software e de uma olhada nos serviços que eu ofereço. Join me down below!"
+      "description": "Transformando ideias em soluções digitais: conheça meu portfólio de desenvolvimento de software e de uma olhada nos serviços que eu ofereço."
    },
    "services": {
       "title": "Serviços que ofereço",
       "description": "Desde o início da minha jornada como designer e desenvolvedor freelancer, tenho trabalhado remotamente para agências, consultado startups e colaborado com pessoas talentosas para criar produtos digitais tanto para uso empresarial quanto para uso do consumidor. Ofereço uma ampla gama de serviços, incluindo design de marca, programação e ensino.",
       "services": [
          {
-            "name": "Designs",
-            "description": "Criando designs elegantes adequados às suas necessidades seguindo a teoria fundamental do design.",
-            "tools": []
+            "name": "Criação de lojas virtuais",
+            "description": "Crio sua loja virtual para alavancar suas vendas seja qual for seu negocio. E-commerce com painel administrador.",
+            "tools": [
+               "shopify",
+               "stripe payments",
+               "nextjs",
+               "tailwindcss",
+               "trpc"
+            ]
          },
          {
             "name": "Codifique seu projeto dos sonhos",
             "description": "Você tem uma ideia para o seu próximo grande site? Vamos torná-lo realidade.",
-            "tools": []
+            "tools": [
+               "shopify",
+               "stripe payments",
+               "nextjs",
+               "tailwindcss",
+               "trpc"
+            ]
          },
          {
             "name": "Consultoria",
             "description": "Está interessado em feedback para o seu projeto atual? Eu posso dar dicas e truques para elevá-lo ao próximo nível.",
-            "tools": []
+            "tools": [
+               "React JS",
+               "Next JS",
+               "React Native",
+               "Tailwind CSS"
+            ]
          }
       ]
    }

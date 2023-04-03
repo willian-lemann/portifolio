@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import deved from "../../public/dev-ed-wave.png";
@@ -16,6 +18,24 @@ type HeroProps = {
 };
 
 export function Hero({ title, description, actionLabel }: HeroProps) {
+  function handleOpen(social: "linkedin" | "github" | "twitter") {
+    function open(link: string) {
+      window.open(link, "_blank");
+    }
+
+    if (social === "linkedin") {
+      return open("https://www.linkedin.com/in/willian-lemann/");
+    }
+
+    if (social === "github") {
+      return open("https://github.com/willian-lemann");
+    }
+
+    if (social === "twitter") {
+      return open("https://twitter.com/LemannWillian");
+    }
+  }
+
   return (
     <section className="min-h-screen">
       <Navigation actionLabel={actionLabel} />
@@ -34,9 +54,18 @@ export function Hero({ title, description, actionLabel }: HeroProps) {
         </p>
 
         <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-          <AiFillTwitterCircle className="cursor-pointer" />
-          <AiFillLinkedin className="cursor-pointer" />
-          <AiFillGithub className="cursor-pointer" />
+          <AiFillTwitterCircle
+            className="cursor-pointer"
+            onClick={() => handleOpen("twitter")}
+          />
+          <AiFillLinkedin
+            className="cursor-pointer"
+            onClick={() => handleOpen("linkedin")}
+          />
+          <AiFillGithub
+            className="cursor-pointer"
+            onClick={() => handleOpen("github")}
+          />
         </div>
 
         <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">

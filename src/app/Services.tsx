@@ -28,7 +28,7 @@ export function Services({ services }: ServicesProps) {
           >
             <h3 className="text-lg font-medium pt-8 pb-2">{service.name}</h3>
             <p className="py-2">{service.description}</p>
-            <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
+            <h4 className="py-4 text-teal-600">Tools I use</h4>
             {service.tools.map((tool) => (
               <p key={tool} className="text-gray-800 py-1">
                 {tool}

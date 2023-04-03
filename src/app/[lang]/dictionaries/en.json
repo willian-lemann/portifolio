@@ -11,9 +11,15 @@
       "description": "Since the beginning of my journey as a freelance designer and developer, I've done remote work for agencies consulted for startups and collaborated with talanted people to create digital products for both business and consumer use. I offer from a wide range of services, including brand design, programming and teaching.",
       "services": [
          {
-            "name": "Beautiful Designs",
-            "description": "Creating elegant designs suited for your needs following core design theory.",
-            "tools": []
+            "name": "E-commerces",
+            "description": "I create your virtual store to boost your sales no matter what your business is. E-commerce with admin panel.",
+            "tools": [
+               "shopify",
+               "stripe payments",
+               "nextjs",
+               "tailwindcss",
+               "trpc"
+            ]
          },
          {
             "name": "Code your dream project",
@@ -23,7 +29,12 @@
          {
             "name": "Consulting",
             "description": "Are you interested in feedback for your current project? I can give you tips and tricks to level it up.",
-            "tools": []
+            "tools": [
+               "React JS",
+               "Next JS",
+               "React Native",
+               "Tailwind CSS"
+            ]
          }
       ]
    }
