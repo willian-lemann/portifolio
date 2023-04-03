@@ -4,12 +4,16 @@ import { useDarkMode } from "@/stores/dark";
 import { classnames } from "@/utils/classnames";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
-export function Navigation() {
+type NavigationProps = {
+  actionLabel: string;
+};
+
+export function Navigation({ actionLabel }: NavigationProps) {
   const { toggle, darkMode } = useDarkMode((state) => state);
 
   return (
     <nav className="py-10 mb-12 flex justify-between items-center dark:text-white">
-      <h1 className="font-poppins text-xl ">Willian Leman</h1>
+      <h1 className="font-poppins text-xl ">Willian Lemann</h1>
       <ul className="flex items-center">
         <li>
           <MoonIcon
@@ -33,7 +37,7 @@ export function Navigation() {
             className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
             href="#"
           >
-            Resume
+            {actionLabel}
           </a>
         </li>
       </ul>

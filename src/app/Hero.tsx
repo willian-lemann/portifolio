@@ -9,10 +9,16 @@ import {
 } from "react-icons/ai";
 import { Navigation } from "./Navigation";
 
-export function Hero() {
+type HeroProps = {
+  title: string;
+  description: string;
+  actionLabel: string;
+};
+
+export function Hero({ title, description, actionLabel }: HeroProps) {
   return (
     <section className="min-h-screen">
-      <Navigation />
+      <Navigation actionLabel={actionLabel} />
 
       <div className="text-center p-10 py-10">
         <h2 className="text-4xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
@@ -20,13 +26,11 @@ export function Hero() {
         </h2>
 
         <h3 className="text-2xl py-2 dark:text-white text-zinc-600 md:text-3xl">
-          Frontend Engineer | E-commerce | Web systems for automation
+          {title}
         </h3>
 
         <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-          Turning ideas into digital solutions: Explore my portfolio of software
-          development and take a look at the services I provide. Join me down
-          below!
+          {description}
         </p>
 
         <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
