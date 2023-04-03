@@ -3,12 +3,16 @@ import Image from "next/image";
 type PortifolioProps = {
   title: string;
   description: string;
-  portifolios: {
+  portifolios: Array<{
     image: string;
-  };
+  }>;
 };
 
-export function Portifolio({ title, description, portifolios }: PortifolioProps) {
+export function Portifolio({
+  title,
+  description,
+  portifolios,
+}: PortifolioProps) {
   return (
     <section className="py-10">
       <div>
