@@ -23,8 +23,8 @@ Working in a good idea of side projects with new devs and participate a least in
 
 ##### 📫 How to reach me...
 <p align="left">
-<a href="https://www.linkedin.com/in/yourusername/"><img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/yourusername/" alt="LinkedIn"></a>
-<a href="https://twitter.com/yourusername"><img src="https://img.shields.io/twitter/follow/yourusername?label=Twitter&style=social" alt="Twitter"></a>
+<a href="https://www.linkedin.com/in/willian-lemann/"><img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/yourusername/" alt="LinkedIn"></a>
+<a href="https://twitter.com/LemannWillian"><img src="https://img.shields.io/twitter/follow/yourusername?label=Twitter&style=social" alt="Twitter"></a>
 <a href="https://willian-lemann.vercel.app"><img src="https://img.shields.io/badge/-Portfolio-yellowgreen?style=flat-square&link=https://willian-lemann.vercel.app" alt="Portfolio"></a>
 </p>
 
