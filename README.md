@@ -1,38 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=willian-lemann&show_icons=true&theme=radical)
 
-## Getting Started
+![GitHub streak](https://github-readme-streak-stats.herokuapp.com/?user=willian-lemann&theme=radical)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Hi there! 👋
+I'm Willian Lemann, a Frontend Engineer based in Santa Catarina, Brazil. I'm passionate about technology, and I'm always looking to learn more about frontend stuff.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+##### 🔭 I’m currently working on...
+A company called Vanhack as a frontend developer, along with a few side projects
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+##### 🌱 I’m currently learning...
+I am focusing to learn more about nextjs 13 and levarage my skills in frontend, however, I am tending to study more about web3 technologies, smart contracts and so, and mobile application using AR.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+##### 👯 I’m looking to collaborate on...
+Working in a good idea of side projects with new devs and participate a least in one hackathon, it would be a great experience. Help other locale bussiness companies, small companies to go digital with e-commerces and stuff.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+##### 💬 Ask me about...
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Frontend
+- Mobile
+- React and NextJS
 
-## Learn More
+##### 📫 How to reach me...
+<p align="left">
+<a href="https://www.linkedin.com/in/yourusername/"><img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/yourusername/" alt="LinkedIn"></a>
+<a href="https://twitter.com/yourusername"><img src="https://img.shields.io/twitter/follow/yourusername?label=Twitter&style=social" alt="Twitter"></a>
+<a href="https://willian-lemann.vercel.app"><img src="https://img.shields.io/badge/-Portfolio-yellowgreen?style=flat-square&link=https://willian-lemann.vercel.app" alt="Portfolio"></a>
+</p>
 
-To learn more about Next.js, take a look at the following resources:
+##### ⚡ Fun fact...
+Personal: I am bodysurf, I play guitar, I sing and I play basketball
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Professional: this readme is part of the my website portifolio repo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+#### Techs and approaches I used to build this portifolio website:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- NextJS with 13.2 version (app dir)
+- i18n in app dir
+- vercel to deploy
+- tailwindcss
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
