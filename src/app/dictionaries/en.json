@@ -29,7 +29,7 @@
          },
          {
             "name": "Consulting",
-            "image": "/project.jpg",
+            "image": "/consulting.jpg",
             "description": "Are you interested in feedback for your current project? I can give you tips and tricks to level it up.",
             "tools": [
                "React JS",

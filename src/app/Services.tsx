@@ -23,7 +23,7 @@ export function Services({ services }: ServicesProps) {
         {services.services.map((service) => (
           <li
             key={service.name}
-            className="relative text-center shadow-lg  rounded-xl my-10  dark:bg-white flex-1"
+            className="relative shadow-lg  rounded-xl my-10  dark:bg-white flex-1"
           >
             <div className="relative aspect-square rounded-t-xl">
               <Image
