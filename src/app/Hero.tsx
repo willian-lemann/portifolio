@@ -2,14 +2,13 @@
 
 import Image from "next/image";
 
-import deved from "../../public/dev-ed-wave.png";
-
 import {
   AiFillLinkedin,
   AiFillTwitterCircle,
   AiFillGithub,
 } from "react-icons/ai";
 import { Navigation } from "./Navigation";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 type HeroProps = {
   title: string;
@@ -40,7 +39,7 @@ export function Hero({ title, description, actionLabel }: HeroProps) {
     <section className="min-h-screen">
       <Navigation actionLabel={actionLabel} />
 
-      <div className="text-center p-10 py-10">
+      <div className="text-center p-10 py-10 flex flex-col">
         <h2 className="text-4xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
           Willian Lemann
         </h2>
@@ -68,14 +67,12 @@ export function Hero({ title, description, actionLabel }: HeroProps) {
           />
         </div>
 
-        <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
-          <Image
-            src={deved}
-            alt="willian lemann avatar"
-            fill
-            className="object-cover"
-          />
-        </div>
+        <a
+          href="#services"
+          className="mx-auto mt-10 cursor-pointer bg-gray-400/10 group hover:bg-gray-400/20 transition-colors duration-300 rounded-full h-20 w-20 flex items-center justify-center"
+        >
+          <ChevronDownIcon className="text-zinc-600/50 group-hover:text-zinc-600/90  h-16 w-16 transition-colors duration-300" />
+        </a>
       </div>
     </section>
   );

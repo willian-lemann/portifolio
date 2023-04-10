@@ -8,10 +8,10 @@
    },
    "services": {
       "title": "Services I Offer",
-      "description": "Since the beginning of my journey as a freelance designer and developer, I've done remote work for agencies consulted for startups and collaborated with talanted people to create digital products for both business and consumer use. I offer from a wide range of services, including brand design, programming and teaching.",
       "services": [
          {
             "name": "E-commerces",
+            "image": "/ecommerce.jpg",
             "description": "I create your virtual store to boost your sales no matter what your business is. E-commerce with admin panel.",
             "tools": [
                "shopify",
@@ -23,11 +23,13 @@
          },
          {
             "name": "Code your dream project",
-            "description": "Do you have an idea for your next great website? Let&apos;s make it a reality.",
+            "image": "/project.jpg",
+            "description": "Do you have an idea for your next big website? Let's make it a reality. From automations to make your life easier to management platforms and professional websites.",
             "tools": []
          },
          {
             "name": "Consulting",
+            "image": "/project.jpg",
             "description": "Are you interested in feedback for your current project? I can give you tips and tricks to level it up.",
             "tools": [
                "React JS",

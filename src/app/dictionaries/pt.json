@@ -8,10 +8,10 @@
    },
    "services": {
       "title": "Serviços que ofereço",
-      "description": "Desde o início da minha jornada como designer e desenvolvedor freelancer, tenho trabalhado remotamente para agências, consultado startups e colaborado com pessoas talentosas para criar produtos digitais tanto para uso empresarial quanto para uso do consumidor. Ofereço uma ampla gama de serviços, incluindo design de marca, programação e ensino.",
       "services": [
          {
             "name": "Criação de lojas virtuais",
+            "image": "/ecommerce.jpg",
             "description": "Crio sua loja virtual para alavancar suas vendas seja qual for seu negocio. E-commerce com painel administrador.",
             "tools": [
                "shopify",
@@ -23,7 +23,8 @@
          },
          {
             "name": "Codifique seu projeto dos sonhos",
-            "description": "Você tem uma ideia para o seu próximo grande site? Vamos torná-lo realidade.",
+            "image": "/project.jpg",
+            "description": "Você tem uma ideia para o seu próximo grande site? Vamos torná-lo realidade. De automações para facilitar a sua vida até plataformas de gerencimento e websites profissionais",
             "tools": [
                "shopify",
                "stripe payments",
@@ -34,13 +35,9 @@
          },
          {
             "name": "Consultoria",
+            "image": "/project.jpg",
             "description": "Está interessado em feedback para o seu projeto atual? Eu posso dar dicas e truques para elevá-lo ao próximo nível.",
-            "tools": [
-               "React JS",
-               "Next JS",
-               "React Native",
-               "Tailwind CSS"
-            ]
+            "tools": []
          }
       ]
    },
