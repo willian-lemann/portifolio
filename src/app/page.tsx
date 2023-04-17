@@ -21,18 +21,13 @@ export default async function Home() {
   const dict = await getDictionary(lang as Locale);
 
   return (
-    <main className=" bg-white px-10 dark:bg-zinc-900 md:px-20 lg:px-40">
+    <main className="bg-white px-10 dark:bg-zinc-900 md:px-20 lg:px-40">
       <Hero
         title={dict.hero.title}
         description={dict.hero.description}
         actionLabel={dict.navigation["action-button"]}
       />
       <Services services={dict.services} />
-      <Portifolio
-        title={dict.portifolio.title}
-        description={dict.portifolio.description}
-        portifolios={dict.portifolio.portifolios}
-      />
     </main>
   );
 }
