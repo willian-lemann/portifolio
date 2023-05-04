@@ -40,7 +40,7 @@ export function Hero({ title, description, actionLabel }: HeroProps) {
       <Navigation actionLabel={actionLabel} />
 
       <div className="text-center p-10 py-10 flex flex-col">
-        <h2 className="text-4xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
+        <h2 className="text-4xl py-2 font-medium md:text-6xl text-gradient">
           Willian Lemann
         </h2>
 
