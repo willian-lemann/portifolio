@@ -4,12 +4,7 @@ import { useDarkMode } from "@/stores/dark";
 import { classnames } from "@/utils/classnames";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
-import Image from "next/image";
 import Link from "next/link";
-
-type NavigationProps = {
-  actionLabel: string;
-};
 
 export function Navigation() {
   const { toggle, darkMode } = useDarkMode((state) => state);

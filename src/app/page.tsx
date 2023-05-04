@@ -1,15 +1,11 @@
 import { headers } from "next/headers";
 import { Hero } from "./Hero";
-import { Portifolio } from "./Portifolio";
+
 import { Locale, getDictionary } from "./dictionaries";
 
 export const metadata = {
   title: "Willian Lemann",
   description: "This is my portifolio",
-};
-
-type HomeProps = {
-  params: { lang: Locale };
 };
 
 export default async function Home() {
