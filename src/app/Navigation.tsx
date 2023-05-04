@@ -2,15 +2,16 @@
 
 import { useDarkMode } from "@/stores/dark";
 import { classnames } from "@/utils/classnames";
-import { ChevronDownIcon, MoonIcon, SunIcon } from "@heroicons/react/24/solid";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
 import Image from "next/image";
+import Link from "next/link";
 
 type NavigationProps = {
   actionLabel: string;
 };
 
-export function Navigation({ actionLabel }: NavigationProps) {
+export function Navigation() {
   const { toggle, darkMode } = useDarkMode((state) => state);
 
   function handleOpen() {
@@ -18,20 +19,16 @@ export function Navigation({ actionLabel }: NavigationProps) {
   }
 
   return (
-    <nav className="py-10 mb-12 flex justify-between items-center dark:text-white">
-      <div className="flex items-center">
-        <div className="relative h-10 w-10 rounded-full">
-          <Image
-            src="/avatar.jpeg"
-            alt="avatar image"
-            fill
-            className="object-cover rounded-full"
-          />
-        </div>
-        <h1 className="font-poppins text-xl pl-3">Willian Lemann</h1>
-      </div>
+    <header className="container py-10 mb-12 flex justify-between items-center dark:text-white">
+      <nav className="flex items-center gap-4 list-none font-poppins">
+        <Link href="/">Home</Link>
+        <Link href="projects">Projects</Link>
+        <Link href="articles">Articles</Link>
+        <Link href="articles">Services</Link>
+        <Link href="about">About</Link>
+      </nav>
 
-      <ul className="flex items-center gap-4">
+      <ul className="flex items-center gap-4 list-none">
         <li>
           <MoonIcon
             onClick={() => toggle()}
@@ -49,16 +46,7 @@ export function Navigation({ actionLabel }: NavigationProps) {
             )}
           />
         </li>
-        <li>
-          <a
-            className="bg-gradient text-white px-4 py-2 border-none rounded-md ml-8"
-            href="#"
-            onClick={handleOpen}
-          >
-            {actionLabel}
-          </a>
-        </li>
       </ul>
-    </nav>
+    </header>
   );
 }

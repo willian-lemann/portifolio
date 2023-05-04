@@ -36,23 +36,26 @@ export function Hero({ title, description, actionLabel }: HeroProps) {
   }
 
   return (
-    <section className="min-h-screen">
-      <Navigation actionLabel={actionLabel} />
+    <section>
+      <div className="text-start py-10 flex flex-col">
+        <div className="relative h-20 w-20 rounded-full">
+          <Image
+            src="/avatar.jpeg"
+            alt="avatar image"
+            fill
+            className="object-cover rounded-full"
+          />
+        </div>
 
-      <div className="text-center p-10 py-10 flex flex-col">
-        <h2 className="text-4xl py-2 font-medium md:text-6xl text-gradient">
-          Willian Lemann
-        </h2>
-
-        <h3 className="text-2xl py-2 dark:text-white text-zinc-600 md:text-3xl">
+        <h3 className="text-2xl pt-4 dark:text-white text-zinc-600 md:text-3xl max-w-xl">
           {title}
         </h3>
 
-        <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+        <p className="text-md pt-4 leading-8 text-gray-800 dark:text-gray-200 max-w-xl md:text-xl">
           {description}
         </p>
 
-        <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
+        <div className="text-5xl flex pt-4 w-40 h-40 gap-4 text-gray-600 dark:text-gray-400">
           <AiFillTwitterCircle
             className="cursor-pointer"
             onClick={() => handleOpen("twitter")}
@@ -66,13 +69,6 @@ export function Hero({ title, description, actionLabel }: HeroProps) {
             onClick={() => handleOpen("github")}
           />
         </div>
-
-        <a
-          href="#services"
-          className="mx-auto mt-10 cursor-pointer bg-gray-400/10 group hover:bg-gray-400/20 transition-colors duration-300 rounded-full h-20 w-20 flex items-center justify-center"
-        >
-          <ChevronDownIcon className="text-zinc-600/50 group-hover:text-zinc-600/90  h-16 w-16 transition-colors duration-300" />
-        </a>
       </div>
     </section>
   );

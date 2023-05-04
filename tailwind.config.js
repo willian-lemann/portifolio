@@ -4,6 +4,10 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: "10rem",
+      },
       fontFamily: {
         burtons: "burtons",
         poppins: ["Poppins", "sans-serif"],

@@ -1,26 +1,22 @@
+import { headers } from "next/headers";
 import Image from "next/image";
+import { Locale, getDictionary } from "../dictionaries";
 
-type ServicesProps = {
-  services: {
-    title: string;
-    services: Array<{
-      name: string;
-      image: string;
-      description: string;
-      tools: string[];
-    }>;
-  };
-};
+export default async function Services() {
+  const headerlist = headers();
 
-export function Services({ services }: ServicesProps) {
+  const lang = headerlist.get("accept-language")?.split(",")[1].split(";")[0];
+
+  const dict = await getDictionary(lang as Locale);
+
   return (
     <section id="services">
       <div>
-        <h3 className="text-3xl py-1 dark:text-white">{services.title}</h3>
+        <h3 className="text-3xl py-1 dark:text-white">{dict.services.title}</h3>
       </div>
 
       <ul className="lg:flex gap-10">
-        {services.services.map((service) => (
+        {dict.services.services.map((service) => (
           <li
             key={service.name}
             className="relative shadow-lg  rounded-xl my-10  dark:bg-white flex-1"

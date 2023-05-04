@@ -1,7 +1,6 @@
 import { headers } from "next/headers";
 import { Hero } from "./Hero";
 import { Portifolio } from "./Portifolio";
-import { Services } from "./Services";
 import { Locale, getDictionary } from "./dictionaries";
 
 export const metadata = {
@@ -21,13 +20,12 @@ export default async function Home() {
   const dict = await getDictionary(lang as Locale);
 
   return (
-    <main className="bg-white px-10 dark:bg-zinc-900 md:px-20 lg:px-40">
+    <main className="bg-white dark:bg-zinc-900 h-[calc(100vh-160px)]">
       <Hero
         title={dict.hero.title}
         description={dict.hero.description}
         actionLabel={dict.navigation["action-button"]}
       />
-      <Services services={dict.services} />
     </main>
   );
 }
