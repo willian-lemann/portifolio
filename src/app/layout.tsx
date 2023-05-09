@@ -1,13 +1,8 @@
-"use client";
-
-import { useDarkMode } from "@/stores/dark";
-import "../styles/globals.css";
+import "@/styles/globals.css";
 
 import { Poppins } from "@next/font/google";
 import { ReactNode } from "react";
-import { Navigation } from "./Navigation";
-import { classnames } from "@/utils/classnames";
-import { Social } from "@/components/Social";
+import { Navigation } from "@/components/Navigation";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,22 +21,22 @@ type RootLayoutProps = {
   };
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
-  const darkMode = useDarkMode((state) => state.darkMode);
+export const metadata = {
+  title: {
+    default: "Willian Lemann",
+    template: "%s | Willian Lemann",
+  },
+};
 
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html>
-      <body className={poppins.className}>
-        <div className={classnames(darkMode ? "dark" : "")}>
-          <div className="flex items-center flex-col justify-center h-screen bg-zinc-900 text-white">
-            <h1>Portifolio is working progress</h1>
-            <p>stay tuned.</p>
-            <Social />
-          </div>
-          {/* <div className="dark:bg-zinc-900">
+      <body>
+        <div>
+          <div className="bg-black">
             <Navigation />
             <div className="container">{children}</div>
-          </div> */}
+          </div>
         </div>
       </body>
     </html>

@@ -4,6 +4,10 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        white: "#eaeaea",
+        black: "#000000",
+      },
       container: {
         center: true,
         padding: "10rem",

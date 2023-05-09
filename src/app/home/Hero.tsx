@@ -7,7 +7,6 @@ import { Social } from "@/components/Social";
 type HeroProps = {
   title: string;
   description: string;
-  actionLabel: string;
 };
 
 export function Hero({ title, description }: HeroProps) {
@@ -23,11 +22,11 @@ export function Hero({ title, description }: HeroProps) {
           />
         </div>
 
-        <h3 className="text-2xl pt-4 dark:text-white text-zinc-600 md:text-3xl max-w-xl">
+        <h3 className="text-2xl pt-4 text-white md:text-3xl max-w-xl">
           {title}
         </h3>
 
-        <p className="text-md pt-4 leading-8 text-gray-800 dark:text-gray-200 max-w-xl md:text-xl">
+        <p className="text-md pt-4 leading-8 text-gray-200 max-w-xl md:text-xl">
           {description}
         </p>
 
