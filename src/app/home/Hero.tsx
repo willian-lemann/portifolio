@@ -7,16 +7,13 @@ import {
   AiFillTwitterCircle,
   AiFillGithub,
 } from "react-icons/ai";
-import { Navigation } from "@/components/Navigation";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 type HeroProps = {
   title: string;
   description: string;
-  actionLabel: string;
 };
 
-export function Hero({ title, description, actionLabel }: HeroProps) {
+export function Hero({ title, description }: HeroProps) {
   function handleOpen(social: "linkedin" | "github" | "twitter") {
     function open(link: string) {
       window.open(link, "_blank");

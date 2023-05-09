@@ -1,18 +1,13 @@
 import { headers } from "next/headers";
 import { Hero } from "@/app/home/Hero";
-
-import { Locale, getDictionary } from "@/app/dictionaries";
+import { getHomeData } from "@/data/home";
 
 export default async function Home() {
-  const dict = await getDictionary("en" as Locale);
+  const homedata: any = await getHomeData();
 
   return (
     <main className="bg-black h-[calc(100vh-152px)]">
-      <Hero
-        title={dict.hero.title}
-        description={dict.hero.description}
-        actionLabel={dict.navigation["action-button"]}
-      />
+      <Hero title={homedata.headline} description={homedata.description} />
     </main>
   );
 }

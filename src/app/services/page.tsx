@@ -1,17 +1,13 @@
+import Image from "next/image";
+import { getServices } from "@/data/services";
+
 export const metadata = {
   title: "Services",
 };
 
-import Image from "next/image";
-import { client } from "../../../sanity/lib/client";
-import { schema } from "../../../sanity/schema";
-import { urlForImage } from "../../../sanity/lib/image";
-import { toPlainText } from "@/utils/to-plain-text";
-
 export default async function Services() {
-  const services = await client.fetch("*[_type == 'service']");
+  const services = await getServices();
 
-  console.log(services[0]);
   return (
     <section className="h-screen">
       <div>
@@ -26,8 +22,8 @@ export default async function Services() {
           >
             <div className="relative aspect-square rounded-t-xl">
               <Image
-                src={urlForImage(service.mainImage).url()}
-                alt={service.mainImage.alt}
+                src={service.image.src}
+                alt={service.image.alt}
                 fill
                 className="object-cover rounded-t-xl"
               />
@@ -37,7 +33,7 @@ export default async function Services() {
               <h3 className="text-xl font-medium pt-8 pb-2 text-white">
                 {service.title}
               </h3>
-              <p className="py-6">{toPlainText(service.body)}</p>
+              <p className="py-6">{service.description}</p>
             </div>
           </li>
         ))}
