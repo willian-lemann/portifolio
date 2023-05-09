@@ -12,7 +12,7 @@ export function toPlainText(blocks: any[] = []) {
         }
         // loop through the children spans, and join the
         // text strings
-        return block.children.map((child) => child.text).join("");
+        return block.children.map((child: any) => child.text).join("");
       })
       // join the paragraphs leaving split by two linebreaks
       .join("\n\n")
