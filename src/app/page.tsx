@@ -1,26 +1,13 @@
 import { headers } from "next/headers";
-import { Hero } from "./Hero";
-import { Portifolio } from "./Portifolio";
-import { Locale, getDictionary } from "./dictionaries";
+import { Hero } from "@/app/home/Hero";
 
-export const metadata = {
-  title: "Willian Lemann",
-  description: "This is my portifolio",
-};
-
-type HomeProps = {
-  params: { lang: Locale };
-};
+import { Locale, getDictionary } from "@/app/dictionaries";
 
 export default async function Home() {
-  const headerlist = headers();
-
-  const lang = headerlist.get("accept-language")?.split(",")[1].split(";")[0];
-
-  const dict = await getDictionary(lang as Locale);
+  const dict = await getDictionary("en" as Locale);
 
   return (
-    <main className="bg-white dark:bg-zinc-900 h-[calc(100vh-160px)]">
+    <main className="bg-black h-[calc(100vh-152px)]">
       <Hero
         title={dict.hero.title}
         description={dict.hero.description}

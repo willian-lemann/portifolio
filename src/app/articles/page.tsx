@@ -1,5 +1,7 @@
+export const metadata = {
+  title: "Articles",
+};
+
 export default function Articles() {
-   return <div className="h-screen">
-      dark:bg-zinc-900
-   </div>
-   }
+  return <div className="h-screen">My articles</div>;
+}

@@ -7,7 +7,7 @@ import {
   AiFillTwitterCircle,
   AiFillGithub,
 } from "react-icons/ai";
-import { Navigation } from "./Navigation";
+import { Navigation } from "@/components/Navigation";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 type HeroProps = {
@@ -47,15 +47,15 @@ export function Hero({ title, description, actionLabel }: HeroProps) {
           />
         </div>
 
-        <h3 className="text-2xl pt-4 dark:text-white text-zinc-600 md:text-3xl max-w-xl">
+        <h3 className="text-2xl pt-4 text-white md:text-3xl max-w-xl">
           {title}
         </h3>
 
-        <p className="text-md pt-4 leading-8 text-gray-800 dark:text-gray-200 max-w-xl md:text-xl">
+        <p className="text-md pt-4 leading-8 text-gray-200 max-w-xl md:text-xl">
           {description}
         </p>
 
-        <div className="text-5xl flex pt-4 w-40 h-40 gap-4 text-gray-600 dark:text-gray-400">
+        <div className="text-5xl flex pt-4 w-40 h-40 gap-4 text-gray-400">
           <AiFillTwitterCircle
             className="cursor-pointer"
             onClick={() => handleOpen("twitter")}

@@ -1,18 +1,17 @@
-import { headers } from "next/headers";
+export const metadata = {
+  title: "Services",
+};
+
 import Image from "next/image";
 import { Locale, getDictionary } from "../dictionaries";
 
 export default async function Services() {
-  const headerlist = headers();
-
-  const lang = headerlist.get("accept-language")?.split(",")[1].split(";")[0];
-
-  const dict = await getDictionary(lang as Locale);
+  const dict = await getDictionary("en" as Locale);
 
   return (
     <section id="services">
       <div>
-        <h3 className="text-3xl py-1 dark:text-white">{dict.services.title}</h3>
+        <h3 className="text-3xl py-1 text-white">{dict.services.title}</h3>
       </div>
 
       <ul className="lg:flex gap-10">

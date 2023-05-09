@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "About",
+};
+
 export default function About() {
-  return <div className="h-screen">dark:bg-zinc-900</div>;
+  return <div className="h-screen">About me</div>;
 }
