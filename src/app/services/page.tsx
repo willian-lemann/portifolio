@@ -3,42 +3,41 @@ export const metadata = {
 };
 
 import Image from "next/image";
-import { Locale, getDictionary } from "../dictionaries";
+import { client } from "../../../sanity/lib/client";
+import { schema } from "../../../sanity/schema";
+import { urlForImage } from "../../../sanity/lib/image";
+import { toPlainText } from "@/utils/to-plain-text";
 
 export default async function Services() {
-  const dict = await getDictionary("en" as Locale);
+  const services = await client.fetch("*[_type == 'service']");
 
+  console.log(services[0]);
   return (
-    <section id="services">
+    <section className="h-screen">
       <div>
-        <h3 className="text-3xl py-1 text-white">{dict.services.title}</h3>
+        <h3 className="text-3xl py-1 text-white">Services I Offer</h3>
       </div>
 
-      <ul className="lg:flex gap-10">
-        {dict.services.services.map((service) => (
+      <ul className="md:grid grid-cols-3">
+        {services.map((service: any) => (
           <li
-            key={service.name}
-            className="relative shadow-lg  rounded-xl my-10  dark:bg-white flex-1"
+            key={service._id}
+            className="relative shadow-lg  rounded-xl my-10  text-white flex-1"
           >
             <div className="relative aspect-square rounded-t-xl">
               <Image
-                src={service.image}
-                alt="service image"
+                src={urlForImage(service.mainImage).url()}
+                alt={service.mainImage.alt}
                 fill
                 className="object-cover rounded-t-xl"
               />
             </div>
-            <div className="px-10 pb-10">
-              <h3 className="text-xl font-medium pt-8 pb-2">{service.name}</h3>
-              <p className="py-6">{service.description}</p>
-              {service.tools?.length > 0 ? (
-                <h4 className="py-4 text-teal-600">Tools I use</h4>
-              ) : null}
-              {service.tools?.map((tool) => (
-                <p key={tool} className="text-gray-800 py-1">
-                  {tool}
-                </p>
-              ))}
+
+            <div className="pb-10">
+              <h3 className="text-xl font-medium pt-8 pb-2 text-white">
+                {service.title}
+              </h3>
+              <p className="py-6">{toPlainText(service.body)}</p>
             </div>
           </li>
         ))}

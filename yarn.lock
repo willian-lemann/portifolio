@@ -4213,7 +4213,7 @@ next-i18next@^13.2.2:
     hoist-non-react-statics "^3.3.2"
     i18next-fs-backend "^2.1.1"
 
-next-sanity@4.3.2:
+next-sanity@^4.3.2:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-4.3.2.tgz#c025649b2fd853f35e1aacf85484dc497863a043"
   integrity sha512-BLO2vrBfPWRirJacmJ+Nkx9PUlH0MTRGaRPm4LcZtEd4ulCDpw3AbfJHvzfaFy62jeIzcdkWBWLAkzjbXKr8gA==
@@ -4223,7 +4223,7 @@ next-sanity@4.3.2:
     "@sanity/webhook" "^2.0.0"
     groq "^3.0.0"
 
-next@^13.0.0:
+next@^13.4.1:
   version "13.4.1"
   resolved "https://registry.yarnpkg.com/next/-/next-13.4.1.tgz#8d23f94c81b3f9cc8b34165ad528457e5befd726"
   integrity sha512-JBw2kAIyhKDpjhEWvNVoFeIzNp9xNxg8wrthDOtMctfn3EpqGCmW0FSviNyGgOSOSn6zDaX48pmvbdf6X2W9xA==
