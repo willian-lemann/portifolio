@@ -6,10 +6,12 @@ export default async function Home() {
   const homedata: any = await getHomeData();
 
   return (
-    <main className="bg-black h-screen flex flex-col">
+    <main className="bg-black flex flex-col">
       <Hero title={homedata.headline} description={homedata.description} />
       {/* @ts-expect-error */}
       <Experience />
+
+      {/* articles */}
     </main>
   );
 }

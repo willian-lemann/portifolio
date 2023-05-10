@@ -8,7 +8,7 @@ export async function Experience() {
   const experiences = await getExperiences();
 
   return (
-    <div className="text-white md:self-end border border-white/20 p-8 mb-10 w-fit rounded-md">
+    <div className="w-full text-white md:self-end border border-white/20 p-8 mb-10 md:w-fit rounded-md">
       <section className="flex items-center gap-2">
         <BriefcaseIcon className="h-6 w-6 text-white/50" />
         <h1>Experiences</h1>
@@ -30,19 +30,21 @@ export async function Experience() {
                 />
               </div>
 
-              <div>
-                <strong>{experience.name}</strong>
-                <p>{experience.role}</p>
+              <div className="text-sm flex items-end justify-between w-full gap-10">
+                <div>
+                  <strong>{experience.name}</strong>
+                  <p>{experience.role}</p>
+                </div>
+
+                <div>
+                  <span>{date(experience.from).get("year")}</span>
+                  <span className="px-2">-</span>
+                  <span>
+                    {index === 0 ? "present" : date(experience.to).get("year")}
+                  </span>
+                </div>
               </div>
             </div>
-
-            <p className="self-end pl-8 space-x-2">
-              <span>{date(experience.from).get("year")}</span>
-              <span>-</span>
-              <span>
-                {index === 0 ? "present" : date(experience.to).get("year")}
-              </span>
-            </p>
           </li>
         ))}
       </ul>
