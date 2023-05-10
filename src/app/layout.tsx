@@ -35,7 +35,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <div>
           <div className="bg-black">
             <Navigation />
-            <div className="container">{children}</div>
+            <div className="md:container px-8">{children}</div>
           </div>
         </div>
       </body>

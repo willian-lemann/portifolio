@@ -8,7 +8,7 @@ export async function Experience() {
   const experiences = await getExperiences();
 
   return (
-    <div className="text-white self-end border border-white/20 p-8 mb-10 w-fit rounded-md">
+    <div className="text-white md:self-end border border-white/20 p-8 mb-10 w-fit rounded-md">
       <section className="flex items-center gap-2">
         <BriefcaseIcon className="h-6 w-6 text-white/50" />
         <h1>Experiences</h1>

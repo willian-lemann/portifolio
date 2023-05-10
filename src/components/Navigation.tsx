@@ -18,8 +18,8 @@ export function Navigation() {
   }
 
   return (
-    <header className="container py-10 mb-12 flex justify-between items-center text-white">
-      <nav className="flex items-center gap-4 list-none font-poppins">
+    <header className="md:container py-10 mb-12 flex md:justify-between justify-center items-center text-white">
+      <nav className="flex items-center justify-center gap-4 list-none font-poppins">
         <Link href="/">Home</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/articles">Articles</Link>
