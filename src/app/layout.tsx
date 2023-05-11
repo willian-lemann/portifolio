@@ -10,10 +10,6 @@ const poppins = Poppins({
   variable: "--primary-font",
 });
 
-export async function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "pt" }];
-}
-
 type RootLayoutProps = {
   children: ReactNode;
   params: {
