@@ -6,6 +6,8 @@ export const metadata = {
   title: "Services",
 };
 
+export const revalidate = 60;
+
 export default async function Services() {
   const services = await getServices();
 

@@ -5,6 +5,8 @@ export const metadata = {
   title: "About",
 };
 
+export const revalidate = 60;
+
 export default async function About() {
   const about = await getAbout();
 
