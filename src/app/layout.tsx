@@ -27,13 +27,9 @@ export const metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html>
-      <body>
-        <div>
-          <div className="bg-black">
-            <Navigation />
-            <div className="md:container px-8">{children}</div>
-          </div>
-        </div>
+      <body className="bg-black">
+        <Navigation />
+        <div className="md:container px-8">{children}</div>
       </body>
     </html>
   );
