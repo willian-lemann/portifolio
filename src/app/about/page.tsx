@@ -14,7 +14,20 @@ export default async function About() {
 
   return (
     <div className="h-screen">
-      {noContent ? <EmptyBanner /> : <div>{about.headline}</div>}
+      {noContent ? (
+        <EmptyBanner />
+      ) : (
+        <div className="text-white">
+          <h1 className="text-3xl">{about.headline}</h1>
+
+          <div
+          className="pt-8 leading-[180%] text-white/90 text-lg"
+            dangerouslySetInnerHTML={{
+              __html: about.description,
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 }

@@ -28,7 +28,7 @@ export default async function ArticleDetail({ params }: ArticleDetailProps) {
         />
       </div>
 
-      <p
+      <div
         className="pt-4 text-base leading-[150%]"
         dangerouslySetInnerHTML={{
           __html: article.description,
