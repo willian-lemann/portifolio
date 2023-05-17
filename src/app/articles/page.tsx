@@ -1,7 +1,7 @@
 import { EmptyBanner } from "@/components/EmptyBanner";
 import { getArticles } from "@/data/articles";
 
-import { date } from "@/lib/date";
+import { Articles } from "./Articles";
 
 export const metadata = {
   title: "Articles",
@@ -9,7 +9,7 @@ export const metadata = {
 
 export const revalidate = 60;
 
-export default async function Articles() {
+export default async function ArticlesPage() {
   const articles = await getArticles();
 
   const isEmpty = articles.length === 0;
@@ -31,80 +31,7 @@ export default async function Articles() {
             </p>
           </div>
 
-          <ul className="mt-10 ml-6 relative">
-            {articles.map((article) => (
-              <>
-                <li
-                  key={article._key}
-                  className="flex gap-6 mb-10 last:mb-10 before:content-[''] before:absolute before:h-full before:w-10 before:top-0 before:-left-6 before:border-l before:border-l-white/30"
-                >
-                  <p>{date(article.publishedAt).format("DD MM YYYY")}</p>
-
-                  <div className="bg-gray-100/10 rounded-md py-4 px-6 ">
-                    <h2>{article.title}</h2>
-                    <p className="line-clamp-3 max-w-xl opacity-80">
-                      {article.description}
-                    </p>
-
-                    <button className="opacity-80 hover:opacity-100 mt-4 cursor-pointer  transition">
-                      Read
-                    </button>
-                  </div>
-                </li>
-                <li
-                  key={article._key}
-                  className="flex gap-6 mb-10 last:mb-10 before:content-[''] before:absolute before:h-full before:w-10 before:top-0 before:-left-6 before:border-l before:border-l-white/30"
-                >
-                  <p>{date(article.publishedAt).format("DD MM YYYY")}</p>
-
-                  <div className="bg-gray-100/10 rounded-md py-4 px-6 ">
-                    <h2>{article.title}</h2>
-                    <p className="line-clamp-3 max-w-xl opacity-80">
-                      {article.description}
-                    </p>
-
-                    <button className="opacity-80 hover:opacity-100 mt-4 cursor-pointer  transition">
-                      Read
-                    </button>
-                  </div>
-                </li>
-                <li
-                  key={article._key}
-                  className="flex gap-6 mb-10 last:mb-10 before:content-[''] before:absolute before:h-full before:w-10 before:top-0 before:-left-6 before:border-l before:border-l-white/30"
-                >
-                  <p>{date(article.publishedAt).format("DD MM YYYY")}</p>
-
-                  <div className="bg-gray-100/10 rounded-md py-4 px-6 ">
-                    <h2>{article.title}</h2>
-                    <p className="line-clamp-3 max-w-xl opacity-80">
-                      {article.description}
-                    </p>
-
-                    <button className="opacity-80 hover:opacity-100 mt-4 cursor-pointer  transition">
-                      Read
-                    </button>
-                  </div>
-                </li>
-                <li
-                  key={article._key}
-                  className="flex gap-6 mb-10 last:mb-10 before:content-[''] before:absolute before:h-full before:w-10 before:top-0 before:-left-6 before:border-l before:border-l-white/30"
-                >
-                  <p>{date(article.publishedAt).format("DD MM YYYY")}</p>
-
-                  <div className="bg-gray-100/10 rounded-md py-4 px-6 ">
-                    <h2>{article.title}</h2>
-                    <p className="line-clamp-3 max-w-xl opacity-80">
-                      {article.description}
-                    </p>
-
-                    <button className="opacity-80 hover:opacity-100 mt-4 cursor-pointer  transition">
-                      Read
-                    </button>
-                  </div>
-                </li>
-              </>
-            ))}
-          </ul>
+          <Articles articles={articles} />
         </div>
       )}
     </div>

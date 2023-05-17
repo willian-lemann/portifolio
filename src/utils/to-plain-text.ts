@@ -1,5 +1,3 @@
-import { BlockDefinition, BlockSchemaType } from "sanity";
-
 export function toPlainText(blocks: any[] = []) {
   return (
     blocks
