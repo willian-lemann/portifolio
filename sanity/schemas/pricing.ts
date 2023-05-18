@@ -15,6 +15,7 @@ export default defineType({
       title: "Description",
       type: "string",
     }),
+
     defineField({
       name: "services",
       title: "Services",
@@ -39,6 +40,7 @@ export default defineType({
                 },
               ],
             },
+            { name: "price", title: "Price", type: "number" },
             {
               title: "Name",
               name: "name",

@@ -1,18 +1,23 @@
 import { urlForImage } from "../../sanity/lib/image";
 import { client } from "../../sanity/lib/client";
+import { Pricing } from "@/app/pricing/types/pricing";
 
 function mappedPricing(pricing: any) {
   const { _key, ...rest } = pricing;
 
   const mappedServices = pricing.services.map((service: any) => {
-    const { image, ...restService } = service;
+    const { image, _key, ...restService } = service;
 
     const imageSrc = urlForImage(image.asset).url();
 
-    return { ...restService, image: { src: imageSrc, alt: image.alt } };
+    return {
+      ...restService,
+      id: _key,
+      image: { src: imageSrc, alt: image.alt },
+    };
   });
 
-  return { ...rest, id: _key, services: mappedServices };
+  return { ...rest, services: mappedServices } as Pricing;
 }
 
 export async function getPricing() {

@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { Poppins } from "@next/font/google";
 import { ReactNode } from "react";
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className="bg-black">
         <Navigation />
         <div className="md:container px-8">{children}</div>
+        <Footer />
       </body>
     </html>
   );
