@@ -2,7 +2,6 @@ import { EmptyBanner } from "@/components/EmptyBanner";
 import { getProject } from "@/data/projects";
 import { LinkIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 
 export const metadata = {
   title: "Projects",

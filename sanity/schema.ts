@@ -7,7 +7,17 @@ import articles from "./schemas/articles";
 import projects from "./schemas/projects";
 import about from "./schemas/about";
 import home from "./schemas/home";
+import pricing from "./schemas/pricing";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [post, blockContent, services, about, projects, articles, home],
+  types: [
+    post,
+    blockContent,
+    services,
+    about,
+    projects,
+    articles,
+    home,
+    pricing,
+  ],
 };
