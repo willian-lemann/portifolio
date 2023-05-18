@@ -18,10 +18,10 @@ export default async function About() {
         <EmptyBanner />
       ) : (
         <div className="text-white">
-          <h1 className="text-3xl">{about.headline}</h1>
+          <h1 className="text-xl">{about.headline}</h1>
 
           <div
-          className="pt-8 leading-[180%] text-white/90 text-lg"
+          className="py-8 leading-[180%] text-white/90 text-base"
             dangerouslySetInnerHTML={{
               __html: about.description,
             }}

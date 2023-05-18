@@ -1,24 +1,28 @@
 import { urlForImage } from "../../sanity/lib/image";
 import { client } from "../../sanity/lib/client";
-import { toPlainText } from "@/utils/to-plain-text";
 
-export async function getProjects() {
-  const projects: any[] = await client.fetch("*[_type == 'project']");
+export async function getProject() {
+  const project: any = await client.getDocument(
+    "7ae3c48d-b58e-4127-9416-8ca328768684"
+  );
 
-  const mappedProjects = projects.map((project) => {
-    const { body, image, ...rest } = project;
+  const { icon, projects, ...rest } = project;
 
-    const imageSrc = urlForImage(image.asset).url();
+  const mappedProjects = projects.map(({ logo, _key, ...restProject }: any) => {
+    const imageSrc = urlForImage(logo.asset).url();
 
     return {
-      ...rest,
-      description: toPlainText(body),
-      image: {
+      ...restProject,
+      id: _key,
+      logo: {
         src: imageSrc,
-        alt: image.alt,
+        alt: logo.alt,
       },
     };
   });
 
-  return mappedProjects;
+  return {
+    ...rest,
+    projects: mappedProjects,
+  };
 }

@@ -16,11 +16,6 @@ export default defineType({
       type: "string",
     }),
     defineField({
-      name: "projectlink",
-      title: "ProjectLink",
-      type: "string",
-    }),
-    defineField({
       name: "icon",
       title: "Icon",
       type: "image",
@@ -36,14 +31,52 @@ export default defineType({
       ],
     }),
     defineField({
+      name: "projects",
+      title: "Projects",
+      type: "array",
+      of: [
+        {
+          title: "Projects",
+          type: "object",
+          fields: [
+            {
+              title: "Logo",
+              name: "logo",
+              type: "image",
+              options: {
+                hotspot: true,
+              },
+              fields: [
+                {
+                  name: "alt",
+                  type: "string",
+                  title: "Alternative Text",
+                },
+              ],
+            },
+            {
+              title: "Name",
+              name: "name",
+              type: "string",
+            },
+            {
+              title: "Description",
+              name: "description",
+              type: "string",
+            },
+            {
+              title: "Link",
+              name: "link",
+              type: "string",
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
       name: "publishedAt",
       title: "Published at",
       type: "datetime",
-    }),
-    defineField({
-      name: "body",
-      title: "Body",
-      type: "blockContent",
     }),
   ],
 });

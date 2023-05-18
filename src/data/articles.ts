@@ -55,7 +55,7 @@ function getMappedArticle(article: any) {
 }
 
 export async function getArticles() {
-  const articles: any[] = await client.fetch("*[_type == 'article']");
+  const articles: Article[] = await client.fetch("*[_type == 'article']");
   return getMappedArticles(articles);
 }
 

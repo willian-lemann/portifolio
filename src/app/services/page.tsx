@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getServices } from "@/data/services";
 import { EmptyBanner } from "@/components/EmptyBanner";
+import { KnowMoreButton } from "@/components/KnowMoreButton";
 
 export const metadata = {
   title: "Services",
@@ -23,7 +24,7 @@ export default async function Services() {
             <h3 className="text-3xl py-1 text-white">Services I Offer</h3>
           </div>
 
-          <ul className="md:grid grid-cols-3">
+          <ul className="md:grid grid-cols-3 gap-x-8">
             {services.map((service: any) => (
               <li
                 key={service._id}
@@ -42,7 +43,8 @@ export default async function Services() {
                   <h3 className="text-xl font-medium pt-8 pb-2 text-white">
                     {service.title}
                   </h3>
-                  <p className="py-6">{service.description}</p>
+
+                  <p>{service.description}</p>
                 </div>
               </li>
             ))}
