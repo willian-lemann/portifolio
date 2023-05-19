@@ -10,7 +10,7 @@ type HeroProps = {
 export function Hero({ title, description }: HeroProps) {
   return (
     <section>
-      <div className="text-start md:py-10 flex flex-col">
+      <div className="text-start flex flex-col">
         <div className="relative h-20 w-20 rounded-full">
           <Image
             src="/avatar.jpeg"

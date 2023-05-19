@@ -5,7 +5,7 @@ type ArticlesProps = { articles: Article[] };
 
 export function Articles({ articles }: ArticlesProps) {
   return (
-    <ul className="mt-10 ml-6 relative">
+    <ul className="ml-6 relative">
       {articles.map((article) => (
         <li
           key={article.id}

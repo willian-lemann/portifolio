@@ -11,7 +11,7 @@ export default async function PricingPage() {
         <p>{pricing.description}</p>
       </div>
 
-      <ul className="grid grid-cols-3 mt-4 gap-8">
+      <ul className="grid md:grid-cols-3 grid-cols-1 mt-4 mb-[10rem] gap-8">
         {pricing.services.map((service) => (
           <PricingCard key={service.id} pricing={service} />
         ))}

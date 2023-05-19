@@ -12,9 +12,9 @@ export default async function Home() {
     <main className="bg-black flex flex-col">
       <Hero title={homedata.headline} description={homedata.description} />
 
-      <h1 className="text-xl text-white">Articles</h1>
+      <h1 className="md:text-white text-xl pb-8">My Articles</h1>
 
-      <div className="flex items-center justify-between text-white">
+      <div className="flex items-start md:flex-row flex-col justify-between text-white gap-20 md:gap-0 mb-20 md:mb-0">
         <Articles articles={articles} />
 
         {/* @ts-expect-error */}
