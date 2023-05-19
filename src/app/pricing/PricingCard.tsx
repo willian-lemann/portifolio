@@ -1,6 +1,11 @@
-import { CheckCircleIcon, CheckIcon } from "@heroicons/react/24/solid";
+import {
+  CheckCircleIcon,
+  CheckIcon,
+  EnvelopeIcon,
+} from "@heroicons/react/24/solid";
 import { PricingService } from "./types/pricing";
 import { moneyFormat } from "@/utils/money-format";
+import { ContactMe } from "./ContactMe";
 
 type PricingCardProps = {
   pricing: PricingService;
@@ -11,7 +16,13 @@ export function PricingCard({ pricing }: PricingCardProps) {
     <div className="rounded-md px-6 py-4 border border-zinc-800 divide-y divide-zinc-800">
       <p className="pb-4">{pricing.name}</p>
 
-      <p className="py-4">{moneyFormat(pricing.price)}</p>
+      <div className="py-4">
+        {pricing.price ? (
+          <span>{moneyFormat(pricing.price)}</span>
+        ) : (
+          <ContactMe />
+        )}
+      </div>
 
       <ul className="pt-4">
         {pricing.benefits.map((benefit) => (
