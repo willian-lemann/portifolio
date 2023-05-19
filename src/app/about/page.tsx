@@ -13,7 +13,7 @@ export default async function About() {
   const noContent = !about;
 
   return (
-    <div className="h-screen">
+    <div>
       {noContent ? (
         <EmptyBanner />
       ) : (
@@ -21,7 +21,7 @@ export default async function About() {
           <h1 className="text-xl">{about.headline}</h1>
 
           <div
-          className="py-8 leading-[180%] text-white/90 text-base"
+            className="py-8 leading-[180%] text-white/90 text-base"
             dangerouslySetInnerHTML={{
               __html: about.description,
             }}

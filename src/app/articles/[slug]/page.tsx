@@ -16,7 +16,7 @@ export default async function ArticleDetail({ params }: ArticleDetailProps) {
   const article = await getArticleBySlug(params.slug);
 
   return (
-    <div className="text-white mb-10">
+    <div className="text-white mb-[8rem]">
       <h1 className="text-xl pb-4">{article.title}</h1>
 
       <div className="relative aspect-video h-[400px]">

@@ -8,7 +8,7 @@ type ArticlesProps = {
 
 export function Articles({ articles }: ArticlesProps) {
   return (
-    <ul className="mt-10 ml-6 relative">
+    <ul className="mt-10 mb-40 ml-6 relative">
       {articles.map((article) => (
         <li
           key={article.id}

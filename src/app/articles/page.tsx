@@ -15,7 +15,7 @@ export default async function ArticlesPage() {
   const isEmpty = articles.length === 0;
 
   return (
-    <div className="">
+    <div>
       {isEmpty ? (
         <EmptyBanner />
       ) : (

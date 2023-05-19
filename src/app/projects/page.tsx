@@ -15,7 +15,7 @@ export default async function Projects() {
   const isEmpty = project.length === 0;
 
   return (
-    <div className="h-screen text-white">
+    <div className="text-white">
       {isEmpty ? (
         <EmptyBanner />
       ) : (
