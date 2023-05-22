@@ -4,6 +4,7 @@ export default defineType({
   name: "service",
   title: "Service",
   type: "document",
+  i18n: true,
   fields: [
     defineField({
       name: "title",

@@ -1,6 +1,13 @@
 import { client } from "../../sanity/lib/client";
+import { getDefaultLanguage } from "@/utils/get-default-language";
 
 export async function getHomeData() {
-  const home = await client.getDocument("e0b4f374-b7cb-4339-9080-6b71c36cce90");
-  return home;
+  const defaultLanguage = getDefaultLanguage();
+
+  const homedata = await client.fetch('*[_type == "home"]');
+
+  const homeDataInEnglish = homedata[0];
+  const homeDataInPortuguese = homedata[1];
+
+  return defaultLanguage === "pt-BR" ? homeDataInPortuguese : homeDataInEnglish;
 }

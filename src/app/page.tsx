@@ -1,8 +1,11 @@
+import { headers } from "next/headers";
+
 import { Hero } from "@/app/home/Hero";
 import { Experience } from "@/app/home/Experience";
 import { getHomeData } from "@/data/home";
 import { Articles } from "./home/Articles";
 import { getArticles } from "@/data/articles";
+import { Lang } from "@/utils/types/lang";
 
 export default async function Home() {
   const homedata: any = await getHomeData();

@@ -1,15 +1,17 @@
 import { getHTMLFromBlocks } from "@/utils/block-to-html";
 import { client } from "../../sanity/lib/client";
+import { getDefaultLanguage } from "@/utils/get-default-language";
 
 export async function getAbout() {
-  const about: any = await client.getDocument(
-    "ee3982d8-f540-44b9-b7c3-d9434b0895a8"
-  );
+  const aboutData = await client.fetch("*[_type == 'about']");
+  const defaultLanguage = getDefaultLanguage();
 
-  const { body, ...rest } = about;
+  const data = defaultLanguage === "en" ? aboutData[0] : aboutData[1];
+
+  const { body, ...rest } = data;
 
   return {
     ...rest,
-    description: getHTMLFromBlocks(body),
+    body: getHTMLFromBlocks(body),
   };
 }

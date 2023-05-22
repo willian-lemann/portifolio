@@ -4,6 +4,7 @@ export default defineType({
   name: "article",
   title: "Article",
   type: "document",
+  i18n: true,
   fields: [
     defineField({
       name: "title",
@@ -14,6 +15,7 @@ export default defineType({
       name: "slug",
       title: "Slug",
       type: "slug",
+
       options: {
         source: "title",
         maxLength: 96,

@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import { ReactNode } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { getDefaultLanguage } from "@/utils/get-default-language";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,9 +27,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
+  const defaultLanguage = getDefaultLanguage();
+
   return (
-    <html>
+    <html lang={defaultLanguage}>
       <body className="bg-black">
+        {/* @ts-expect-error */}
         <Navigation />
 
         <div className="md:container px-8 mb-20">{children}</div>

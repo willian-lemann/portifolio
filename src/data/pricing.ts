@@ -1,6 +1,7 @@
 import { urlForImage } from "../../sanity/lib/image";
 import { client } from "../../sanity/lib/client";
 import { Pricing } from "@/app/pricing/types/pricing";
+import { getDefaultLanguage } from "@/utils/get-default-language";
 
 function mappedPricing(pricing: any) {
   const { _key, ...rest } = pricing;
@@ -21,9 +22,16 @@ function mappedPricing(pricing: any) {
 }
 
 export async function getPricing() {
-  const pricingData = await client.getDocument(
-    "02aff5cd-eae0-4e52-b8fc-68461e492a8a"
-  );
+  const pricingData = await client.fetch('*[_type == "pricing"]');
 
-  return mappedPricing(pricingData);
+  const defaultLanguage = getDefaultLanguage();
+
+  
+  const pricingInEnglish = pricingData[0];
+  const pricingInPortuguese = pricingData[1];
+
+  let data =
+    defaultLanguage === "pt-BR" ? pricingInPortuguese : pricingInEnglish;
+
+  return mappedPricing(data);
 }

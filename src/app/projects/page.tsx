@@ -26,20 +26,16 @@ export default async function Projects() {
 
               <div className="text-zinc-300">
                 <p>{project.description}</p>
-                <p>
-                  Other projects like, instagram filter, ecommerce templates,
-                  and react native demos, you can check in my github
-                  <a href="https://github.com/willian-lemann">
-                    github.com/willian-lemann
-                  </a>
-                </p>
               </div>
             </div>
           </section>
 
-          <ul className="grid grid-cols-3 mt-20">
+          <ul className="grid md:grid-cols-3 grid-cols-1 gap-8 mt-10">
             {project.projects.map((project: any) => (
-              <li key={project.id} className="space-y-4 text-zinc-300">
+              <li
+                key={project.id}
+                className="space-y-4 text-zinc-300  border border-zinc-800 p-6 rounded-md"
+              >
                 <div className="relative h-10 w-10">
                   <Image
                     src={project.logo.src}

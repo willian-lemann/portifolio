@@ -4,6 +4,7 @@ export default defineType({
   name: "about",
   title: "About",
   type: "document",
+  i18n: true,
   fields: [
     defineField({
       name: "headline",

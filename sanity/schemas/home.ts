@@ -4,6 +4,9 @@ export default defineType({
   name: "home",
   title: "Home",
   type: "document",
+  i18n: {
+    languages: ["en", "pt"],
+  },
   fields: [
     defineField({
       name: "headline",
@@ -29,6 +32,11 @@ export default defineType({
           title: "Alternative Text",
         },
       ],
+    }),
+    defineField({
+      name: "headerExperiences",
+      title: "HeaderExperiences",
+      type: "string",
     }),
     defineField({
       name: "experiences",

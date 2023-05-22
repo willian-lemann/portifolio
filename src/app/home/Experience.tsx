@@ -11,11 +11,11 @@ export async function Experience() {
     <div className="w-full text-white md:self-end border border-white/20 p-8 mb-10 md:w-fit rounded-md">
       <section className="flex items-center gap-2">
         <BriefcaseIcon className="h-6 w-6 text-white/50" />
-        <h1>Experiences</h1>
+        <h1>{experiences.title}</h1>
       </section>
 
       <ul className="mt-4">
-        {experiences.map((experience: any, index, list) => (
+        {experiences.items.map((experience: any, index, list) => (
           <li
             key={experience._key}
             className="flex items-center justify-between mb-4 last:mb-0"

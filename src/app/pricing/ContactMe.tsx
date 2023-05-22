@@ -2,7 +2,9 @@
 
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 
-export function ContactMe() {
+type ContactMeProps = { label: string };
+
+export function ContactMe({ label }: ContactMeProps) {
   function handleOpenEmail() {
     const mailTo = process.env.NEXT_PUBLIC_CONTACT_EMAIL_TO;
     const subject = "I want to request a service";
@@ -18,7 +20,7 @@ export function ContactMe() {
       onClick={handleOpenEmail}
     >
       <EnvelopeIcon className="h-6 w-6" />
-      <span>Contact me</span>
+      <span>{label}</span>
     </div>
   );
 }

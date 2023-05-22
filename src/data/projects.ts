@@ -1,12 +1,18 @@
 import { urlForImage } from "../../sanity/lib/image";
 import { client } from "../../sanity/lib/client";
+import { getDefaultLanguage } from "@/utils/get-default-language";
 
 export async function getProject() {
-  const project: any = await client.getDocument(
-    "7ae3c48d-b58e-4127-9416-8ca328768684"
-  );
+  const defaultLanguage = getDefaultLanguage();
 
-  const { icon, projects, ...rest } = project;
+  const projectData = await client.fetch('*[_type == "project"]');
+
+  const homeDataInEnglish = projectData[0];
+  const homeDataInPortuguese = projectData[1];
+
+  const data = defaultLanguage === "pt-BR" ? homeDataInPortuguese : homeDataInEnglish;
+
+  const { icon, projects, ...rest } = data;
 
   const mappedProjects = projects.map(({ logo, _key, ...restProject }: any) => {
     const imageSrc = urlForImage(logo.asset).url();

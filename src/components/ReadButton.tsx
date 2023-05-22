@@ -2,9 +2,9 @@
 
 import { useRouter } from "next/navigation";
 
-type ReadButtonProps = { slug: string };
+type ReadButtonProps = { slug: string; buttonLabel: string };
 
-export function ReadButton({ slug }: ReadButtonProps) {
+export function ReadButton({ slug, buttonLabel }: ReadButtonProps) {
   const router = useRouter();
 
   function handleGoArticleDetail(slug: string) {
@@ -16,7 +16,7 @@ export function ReadButton({ slug }: ReadButtonProps) {
       onClick={() => handleGoArticleDetail(slug)}
       className="opacity-80 hover:opacity-100 mt-4 cursor-pointer  transition"
     >
-      Read
+      {buttonLabel}
     </button>
   );
 }

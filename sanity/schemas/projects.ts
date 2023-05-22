@@ -4,6 +4,7 @@ export default defineType({
   name: "project",
   title: "Project",
   type: "document",
+  i18n: true,
   fields: [
     defineField({
       name: "title",

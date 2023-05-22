@@ -4,6 +4,7 @@ export default defineType({
   name: "pricing",
   title: "Pricing",
   type: "document",
+  i18n: true,
   fields: [
     defineField({
       name: "title",

@@ -1,10 +1,19 @@
 import { urlForImage } from "../../sanity/lib/image";
 import { client } from "../../sanity/lib/client";
+import { getDefaultLanguage } from "@/utils/get-default-language";
 
 export async function getExperiences() {
-  const data: any = await client.getDocument(
-    "e0b4f374-b7cb-4339-9080-6b71c36cce90"
-  );
+  const defaultLanguage = getDefaultLanguage();
+
+  const homedata = await client.fetch('*[_type == "home"]');
+
+  const homeDataInEnglish = homedata[0];
+  const homeDataInPortuguese = homedata[1];
+
+  let data =
+    defaultLanguage === "pt-BR" ? homeDataInPortuguese : homeDataInEnglish;
+
+  defaultLanguage === "pt-BR" ? homeDataInPortuguese : homeDataInEnglish;
 
   const experiences: any[] = data.experiences.map((experience: any) => {
     const { logo, ...rest } = experience;
@@ -20,5 +29,8 @@ export async function getExperiences() {
     };
   });
 
-  return experiences.reverse();
+  return {
+    items: experiences.reverse(),
+    title: data.headerExperiences,
+  };
 }

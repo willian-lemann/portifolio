@@ -3,6 +3,7 @@ import { client } from "../../sanity/lib/client";
 import { toPlainText } from "@/utils/to-plain-text";
 import { Article } from "@/app/articles/types/article";
 import { getHTMLFromBlocks } from "@/utils/block-to-html";
+import { getDefaultLanguage } from "@/utils/get-default-language";
 
 function getMappedArticles(articles: any[]) {
   const mappedArticles = articles.map((article) => {
@@ -55,8 +56,21 @@ function getMappedArticle(article: any) {
 }
 
 export async function getArticles() {
-  const articles: Article[] = await client.fetch("*[_type == 'article']");
-  return getMappedArticles(articles);
+  const articleData = await client.fetch("*[_type == 'article']");
+
+  const defaultLanguage = getDefaultLanguage();
+
+  const articlesInPortuguese: Article[] = articleData.filter(
+    (article: any) => article.__i18n_lang === "pt"
+  );
+  const articlesInEnglish: Article[] = articleData.filter(
+    (article: any) => article.__i18n_lang !== "pt"
+  );
+
+  const data =
+    defaultLanguage === "en" ? articlesInEnglish : articlesInPortuguese;
+
+  return getMappedArticles(data);
 }
 
 export async function getArticleBySlug(slug: string) {
