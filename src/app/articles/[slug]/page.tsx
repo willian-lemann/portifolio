@@ -19,12 +19,12 @@ export default async function ArticleDetail({ params }: ArticleDetailProps) {
     <div className="text-white mb-[8rem]">
       <h1 className="text-xl pb-4">{article.title}</h1>
 
-      <div className="relative aspect-video h-[400px]">
+      <div className="relative rounded-md md:aspect-video h-[400px]">
         <Image
           src={article.image.src}
           alt="article image"
           fill
-          className="object-cover"
+          className="object-cover rounded-md"
         />
       </div>
 
