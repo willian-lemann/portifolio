@@ -31,7 +31,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <html lang={defaultLanguage}>
-      <body className="bg-black">
+      <body className="bg-black flex flex-col h-screen">
         {/* @ts-expect-error */}
         <Navigation />
 

@@ -7,7 +7,7 @@ type ArticlesProps = { articles: Article[] };
 export function Articles({ articles }: ArticlesProps) {
   const defaultLanguage = getDefaultLanguage();
 
-  const buttonLabel = defaultLanguage === "en" ? "Read" : "Ler mais";
+  const buttonLabel = defaultLanguage === "en-US" ? "Read" : "Ler mais";
 
   return (
     <ul className="ml-6 relative">

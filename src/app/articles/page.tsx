@@ -16,7 +16,7 @@ const texts = {
     subtitle:
       "Escrevendo sobre minhas experiências na construção de software, tecnologias que utilizo, estratégias e muito mais. Aqui vou falar sobre meus projetos paralelos e as tecnologias e bibliotecas que utilizo.",
   },
-  en: {
+  "en-US": {
     title: "Explore more about my life as a software developer",
     subtitle: `Writing about my experiences buiding software, techs I use,
     strategies, and much more. Here I am gonna talk about my side
