@@ -35,7 +35,7 @@ export function Navbar({ links }: NavbarProps) {
         <nav
           className={classnames(
             isMenuOpen ? "-translate-x-0" : "-translate-x-full",
-            "transition pt-20 px-10 gap-4 flex flex-col bg-black absolute bottom-0 h-screen left-0 z-20"
+            "transition pt-20 px-10 gap-4 flex flex-col bg-black fixed bottom-0 top-0 left-0 z-20"
           )}
         >
           <button onClick={toggleMenu}>
