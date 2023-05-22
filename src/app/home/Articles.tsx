@@ -1,9 +1,14 @@
+import { getDefaultLanguage } from "@/utils/get-default-language";
 import { Article } from "../articles/types/article";
 import { ReadButton } from "@/components/ReadButton";
 
 type ArticlesProps = { articles: Article[] };
 
 export function Articles({ articles }: ArticlesProps) {
+  const defaultLanguage = getDefaultLanguage();
+
+  const buttonLabel = defaultLanguage === "en" ? "Read" : "Ler mais";
+
   return (
     <ul className="ml-6 relative">
       {articles.map((article) => (
@@ -18,7 +23,7 @@ export function Articles({ articles }: ArticlesProps) {
               {article.description}
             </p>
 
-            <ReadButton slug={article.slug} />
+            <ReadButton slug={article.slug} buttonLabel={buttonLabel} />
           </div>
         </li>
       ))}
