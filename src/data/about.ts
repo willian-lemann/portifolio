@@ -6,7 +6,7 @@ export async function getAbout() {
   const aboutData = await client.fetch("*[_type == 'about']");
   const defaultLanguage = getDefaultLanguage();
 
-  const data = defaultLanguage === "en" ? aboutData[0] : aboutData[1];
+  const data = defaultLanguage === "en-US" ? aboutData[0] : aboutData[1];
 
   const { body, ...rest } = data;
 

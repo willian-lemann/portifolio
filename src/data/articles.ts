@@ -68,7 +68,7 @@ export async function getArticles() {
   );
 
   const data =
-    defaultLanguage === "en" ? articlesInEnglish : articlesInPortuguese;
+    defaultLanguage === "en-US" ? articlesInEnglish : articlesInPortuguese;
 
   return getMappedArticles(data);
 }
