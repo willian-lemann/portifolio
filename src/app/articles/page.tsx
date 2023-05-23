@@ -17,7 +17,6 @@ export default async function ArticlesPage() {
 
   const isEmpty = articles.length === 0;
 
-  console.log(defaultLanguage);
   return (
     <div>
       {isEmpty ? (
