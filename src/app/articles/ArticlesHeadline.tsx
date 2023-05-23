@@ -14,6 +14,12 @@ const texts = {
      strategies, and much more. Here I am gonna talk about my side
      projects and the techs and libraries I use`,
   },
+  "en-GB": {
+    title: "Explore more about my life as a software developer",
+    subtitle: `Writing about my experiences buiding software, techs I use,
+    strategies, and much more. Here I am gonna talk about my side
+    projects and the techs and libraries I use`,
+  },
 };
 
 type ArticlesHeadlineProps = { language: Lang };
