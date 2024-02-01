@@ -28,16 +28,9 @@ Working in a good idea of side projects with new devs and participate a least in
 <a href="https://willian-lemann.vercel.app"><img src="https://img.shields.io/badge/-Portfolio-yellowgreen?style=flat-square&link=https://willian-lemann.vercel.app" alt="Portfolio"></a>
 </p>
 
-##### ⚡ Fun fact...
-Personal: I am bodysurf, I play guitar, I sing and I play basketball
+As a Front-end Developer at VanHack, I build and maintain new features for the platform that connects candidates and companies for relocation or remote work opportunities. I use React, Next.js, TailwindCSS, and Typescript to create user-friendly and responsive web applications that enhance the user experience and retention rate. I also collaborate with other developers, designers, and product managers to migrate the legacy Webpack React application to a new Next.js application using modern features such as SSR and ISR.
 
-Professional: this readme is part of the my website portifolio repo
+I graduated from Fatec college with a degree in Analysis and systems development in July 2021, where I learned the fundamentals of software development and gained hands-on experience with various technologies and tools. I have also worked as a Full Stack Developer at Viaflow, where I developed and maintained a crypto coin platform and a CLI tool for generating APIs in Node.js. Besides my professional experience, I am passionate about learning new skills and exploring new domains, such as AI, automation, web3, and AR. My goal is to grow professionally and stay up to date with the latest trends and best practices in frontend engineering.
 
-
-#### Techs and approaches I used to build this portifolio website:
-
-- NextJS with 13.2 version (app dir)
-- i18n in app dir
-- vercel to deploy
-- tailwindcss
+Today, I am creating a startup with a friend, using the same techs as above mentioned; NextJS, TailwindCSS, Typescript, Planetscale database and NodeJS
 
