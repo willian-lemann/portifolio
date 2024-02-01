@@ -5,6 +5,7 @@
 
 ## Hi there! 👋
 I'm Willian Lemann, a Frontend Engineer based in Santa Catarina, Brazil. I'm passionate about technology, and I'm always looking to learn more about frontend stuff.
+I have 5 Years Of experience in Software Engineering
 
 ##### 🔭 I’m currently working on...
 A company called Vanhack as a frontend developer, along with a few side projects
